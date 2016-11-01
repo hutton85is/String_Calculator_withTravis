@@ -1,4 +1,4 @@
-/** a little javadoc cause its pretty
+/** String_calculator its ozom
 */
 
 package String_Calculator;
