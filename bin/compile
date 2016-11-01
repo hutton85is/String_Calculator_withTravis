@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ ! -d classes ]; then 
+  mkdir classes 
+fi
+javac src/main/java/String_Calculator/*.java -d classes

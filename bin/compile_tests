@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ ! -d classes ]; then
+  mkdir classes
+fi
+
+#on linux
+javac -cp "classes:lib/junit-4.11.jar" src/test/java/String_Calculator/*.java -d classes
+#on windows
+#javac -classpath "classes;lib\junit-4.11.jar" src/test/java/String_Calculator/*.java -d classes
