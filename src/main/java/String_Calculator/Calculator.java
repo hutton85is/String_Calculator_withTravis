@@ -7,7 +7,12 @@ import java.util.*;
 
 public class Calculator
 {
-	//recieve integer array and return their sum
+	/**
+	* recieve integer array and return their sum
+	* <p>
+	* @param a is an unknown length of an integer array
+	* @return the sum of all elements in a
+	*/
 	public static int sum(int ... a)
 	{
 		if (a.length == 1)
@@ -17,7 +22,12 @@ public class Calculator
 		return a[0]  + sum(Arrays.copyOfRange(a,1,a.length));
 	}
 
-	//if negative numbers exist, throw an exception
+	/**
+	* Function to see if a number is negative
+	* <p>
+	* @param arr is an unknown length of an integer array
+	* @throws an IllegalArgumentException if an integer in arr is a negative
+	*/
 	public static void is_it_negative(int ... arr)
 	{
 		int[] neg = Arrays.stream(arr).filter(x -> x < 0).toArray();
