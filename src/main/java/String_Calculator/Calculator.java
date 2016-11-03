@@ -26,7 +26,6 @@ public class Calculator
 	* Function to see if a number is negative
 	* <p>
 	* @param arr is an unknown length of an integer array
-	* @throws an IllegalArgumentException if an integer in arr is a negative
 	*/
 	public static void is_it_negative(int ... arr)
 	{
@@ -38,7 +37,11 @@ public class Calculator
 		}
 	}
 
-	//split string into integer array
+	/**Split string into an integer array
+	*
+	* @param s is the string to be checked for integer values
+	* @return integer array from numbers in String s
+	*/
 	public static int[] strtoint(String s)
 	{
 		//Create a list containing a split string where "," and "\\n" is found
@@ -81,7 +84,12 @@ public class Calculator
 		return arr;
 	}
 
-	//recieve numbers as text, and return their sum
+	/**
+	* Recieve numbers as text, and return their sum
+	*
+	* @param text is the String with integer values
+	* @return sum of integer values in the String text
+	*/
 	public static int add(String text)
 	{
 		return sum(strtoint(text));

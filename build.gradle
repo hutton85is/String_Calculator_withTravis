@@ -25,7 +25,7 @@ task createJavadoc(type: Javadoc) {
 }
 
 task moveJavadoc(type: Exec, dependsOn: javadoc) {
-	commandLine '/home/host_javadocs'
+	commandLine '/home/build/docs/javadoc'
 }
 
 /*
