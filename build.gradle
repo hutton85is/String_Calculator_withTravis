@@ -28,11 +28,13 @@ task moveJavadoc(type: Exec, dependsOn: javadoc) {
 	commandLine '/home/build/docs/javadoc'
 }
 
-/*
-jar{
-	manifest{
-		attribute 'Main-Class': '/src/main/java/String_Calculator/Calculator.java'
-*/
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
@@ -45,3 +47,4 @@ dependencies {
     testCompile 'junit:junit:4.11'
 }
 
+check.dependsOn jacocoTestReport
