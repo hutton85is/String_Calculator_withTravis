@@ -14,7 +14,7 @@ public class Calculator
 	* @return the sum of all elements in a
 	*/
 	public static int sum(int ... a)
-	
+	{
 		if (a.length == 1)
 		{
 			return a[a.length-1];
