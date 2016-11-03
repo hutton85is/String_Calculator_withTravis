@@ -11,7 +11,7 @@ public class CalculatorTest {
 	@Test
 	public void test_add_EmptyString()
 	{
-		assertEquals(0,Calculator.add(""));
+		assertEquals(10,Calculator.add(""));
 	}
 
 	//Test : input of a single value
