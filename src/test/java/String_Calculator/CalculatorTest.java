@@ -4,15 +4,16 @@ import java.util.*;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.instanceOf;
 
 public class CalculatorTest {
 
 	@Test 
 	public void ClassTest() {
 
-        	TicTacToe TTTClassTest = new TicTacToe();
+        	Calculator StringCalcTest = new Calculator();
 
-		assertThat(TTTClassTest, instanceOf(TicTacToe.class));
+		assertThat(StringCalcTest, instanceOf(Calculator.class));
 	}
 
 	//Test : input of an empty string
