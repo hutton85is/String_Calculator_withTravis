@@ -7,6 +7,14 @@ import static org.junit.Assert.*;
 
 public class CalculatorTest {
 
+	@Test 
+	public void ClassTest() {
+
+        	TicTacToe TTTClassTest = new TicTacToe();
+
+		assertThat(TTTClassTest, instanceOf(TicTacToe.class));
+	}
+
 	//Test : input of an empty string
 	@Test
 	public void test_add_EmptyString()
