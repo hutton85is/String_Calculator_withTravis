@@ -68,15 +68,8 @@ public class Calculator
 
 		//creating an integer array out of numbers from string array
 		int[] arr = new int[items.size()];
-		for (int i = 0; i < items.size(); i++)
-		{
-			arr[i] = Integer.parseInt(items.get(i));
-			//number cannot be greater than 1000
-			if (arr[i] > 1000)
-			{
-				arr[i] = 0;
-			}
-		}
+
+		arr = createIntegerArray(items);
 
 		//checking for a negative number
 		is_it_negative(arr);
@@ -94,4 +87,25 @@ public class Calculator
 	{
 		return sum(strtoint(text));
 	}
+
+	/**
+	* Create integer array out of a String list
+	*
+	* @param items contains a list of strings to be converted
+	* @return integer array out of string list items
+	*/
+	private static int[] createIntegerArray(ArrayList<String> items)
+	{
+		int[] arr = new int[items.size()];
+		for (int i = 0; i < items.size(); i++)
+		{
+			arr[i] = Integer.parseInt(items.get(i));
+			if (arr[i] > 1000)
+			{
+				arr[i] = 0;
+			}
+		}
+		return arr;
+	}
+
 }
